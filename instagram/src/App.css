@@ -2,31 +2,48 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+img {
+  width: 100%;
+  height: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search-bar {
+  position: fixed;
+  top: 0;
+  height: 76px;
+  width: 100%;
+  border-bottom: 2px solid #e2e2e2;
+  z-index: 10;
+  background: #fff;
+}
+
+.search-bar-content {
   display: flex;
-  flex-direction: column;
+  margin: 0 auto;
+  justify-content: space-between;
+  height: 61px;
+  width: 100%;
+  max-width: 1000px;
+  padding-top: 15px;
+  position: relative;
+}
+
+.search-bar-left {
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
+.camera {
+  border-right: 1px solid gray;
+  margin: 0 10px 0 0;
+  padding: 0 10px;
+  height: 27px;
+  width: 50px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.instagram-logo {
+  margin: 7px 0 0 2%;
+  width: 120px;
+  cursor: pointer;
 }
