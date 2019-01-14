@@ -7,7 +7,7 @@ const PostContainer = (props) => {
     return (
         <div className="post-container">
             <Post/>
-            <CommentSection comments={props.post.comments} key={props.post.timestamp}/>
+            <CommentSection handleAddComment={props.handleAddComment} comments={props.post.comments} timestamp = {props.post.timestamp} key={props.post.timestamp}/>
         </div>
     )
 }
