@@ -88,4 +88,46 @@ img {
 .icon {
   width: 28px;
   height: 30px;
+  cursor: pointer;
+}
+
+.icon-heart {
+  width: 31px;
+  height: 30px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.icon-speech {
+  width: 34px;
+  height: 28px;
+  cursor: pointer;
+}
+
+.icon-bookmark {
+  width: 28px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.thumbnail {
+  border-radius: 100px;
+  height: 30px;
+  width: 30px;
+}
+
+.post-header {
+  font-weight: bold;
+}
+
+.post-footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.post-footer-bottom{
+  text-align: left;
+  padding: 0 10px 10px 14px;
 }
