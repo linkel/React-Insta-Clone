@@ -21,11 +21,21 @@ class App extends Component {
     let comment = event.target[0].value
     let object = this.state.posts
       for (let i in object) {
-        console.log(i)
-        console.log(parseInt(index))
         if (parseInt(i) === parseInt(index)) {
            object[i].comments.push({username: username, text: comment})
            break;
+      }
+    }
+    this.setState({posts : object});
+  }
+
+  handleLikes = (event, index) => {
+    let object = this.state.posts;
+    console.log(event);
+    for (let i in object) {
+      if (parseInt(i) === parseInt(index)) {
+         object[i].likes += 1;
+         break;
       }
     }
     this.setState({posts : object});
@@ -39,7 +49,7 @@ class App extends Component {
         </div>
         <div className="post-list">
               {this.state.posts.map((obj) =>
-              <PostContainer handleAddComment={this.handleAddComment} post={obj} index={this.state.posts.indexOf(obj)} key={this.state.posts.indexOf(obj)}/>
+              <PostContainer handleLikes={this.handleLikes} handleAddComment={this.handleAddComment} post={obj} index={this.state.posts.indexOf(obj)} key={this.state.posts.indexOf(obj)}/>
               )}
         </div>
       </div>
