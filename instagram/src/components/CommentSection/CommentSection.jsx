@@ -8,8 +8,8 @@ const CommentSection = (props) => {
             {props.comments.map((obj) =>
             <Comment username={obj.username} text={obj.text} key={obj.text}/>
             )}
-            <form onSubmit={(e) => props.handleAddComment(e, props.timestamp)}>
-                <input type="text" placeholder="comment"></input>
+            <form onSubmit={(e) => props.handleAddComment(e, props.index)}>
+                <input type="text" placeholder="Add a comment..."></input>
             </form>
         </div>
     )

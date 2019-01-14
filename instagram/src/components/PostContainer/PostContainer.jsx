@@ -6,8 +6,8 @@ import Post from './Post';
 const PostContainer = (props) => {
     return (
         <div className="post-container">
-            <Post/>
-            <CommentSection handleAddComment={props.handleAddComment} comments={props.post.comments} timestamp = {props.post.timestamp} key={props.post.timestamp}/>
+            <Post username={props.post.username} thumbnail={props.post.thumbnailUrl} image={props.post.imageUrl} likes={props.post.likes}/>
+            <CommentSection handleAddComment={props.handleAddComment} comments={props.post.comments} timestamp = {props.post.timestamp} index={props.index} key={props.index}/>
         </div>
     )
 }

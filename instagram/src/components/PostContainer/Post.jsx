@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Post = () => {
+const Post = (props) => {
     return (
         <div className="post">
-
+            <img src={props.image}/>
         </div>
     )
 }

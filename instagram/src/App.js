@@ -15,13 +15,15 @@ class App extends Component {
     this.setState({posts: dummyData})
   }
 
-  handleAddComment = (event, timestamp) => {
+  handleAddComment = (event, index) => {
     event.preventDefault();
     let username = "temporary"
     let comment = event.target[0].value
     let object = this.state.posts
       for (let i in object) {
-        if (object[i].timestamp === timestamp) {
+        console.log(i)
+        console.log(parseInt(index))
+        if (parseInt(i) === parseInt(index)) {
            object[i].comments.push({username: username, text: comment})
            break;
       }
@@ -37,7 +39,7 @@ class App extends Component {
         </div>
         <div className="post-list">
               {this.state.posts.map((obj) =>
-              <PostContainer handleAddComment={this.handleAddComment} post={obj} key={obj.timestamp}/>
+              <PostContainer handleAddComment={this.handleAddComment} post={obj} index={this.state.posts.indexOf(obj)} key={this.state.posts.indexOf(obj)}/>
               )}
         </div>
       </div>
