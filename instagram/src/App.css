@@ -7,6 +7,9 @@ img {
   height: auto;
 }
 
+.post-list {
+  margin-top: 76px;
+}
 .search-bar {
   position: fixed;
   top: 0;
@@ -26,6 +29,7 @@ img {
   max-width: 1000px;
   padding-top: 15px;
   position: relative;
+  align-items: center;
 }
 
 .search-bar-left {
@@ -40,10 +44,36 @@ img {
   padding: 0 10px;
   height: 27px;
   width: 50px;
-
+  cursor: pointer;
 }
 .instagram-logo {
   margin: 7px 0 0 2%;
-  width: 120px;
+  width: 100px;
   cursor: pointer;
+}
+
+.search-bar-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9 url(./img/search.svg) no-repeat scroll 1px 1px;
+  background-size: 8%;
+  background-position: 50px 4px;
+  text-align: center;
+  border-radius: 5px;
+  border: 2px solid rgb(216, 216, 216);
+  
+}
+
+.search-bar-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 150px;
+  justify-content: space-between;
+}
+
+.icon {
+  width: 28px;
+  height: 30px;
 }

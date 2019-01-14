@@ -8,9 +8,9 @@ const CommentSection = (props) => {
             {props.comments.map((obj) =>
               <Comment username={obj.username} text={obj.text} key={obj.text}/>
               )}
-              <form>
-                  <input type="text"></input>
-              </form>
+            <form>
+                <input type="text" placeholder="comment"></input>
+            </form>
         </div>
 
     )
@@ -19,4 +19,5 @@ const CommentSection = (props) => {
 CommentSection.propTypes = {
     comments: PropTypes.arrayOf(PropTypes.object)
 }
+
 export default CommentSection;
