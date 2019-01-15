@@ -6,9 +6,9 @@ import Authenticate from "./components/Authentication/Authenticate";
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <>
         <PostsPage username={this.props.username}/>
-      </div>
+      </>
     );
   }
 }

@@ -87,7 +87,7 @@ class PostsPage extends React.Component {
     return (
       <>
         <SearchBarStyle>
-          <SearchBar handleSearch={this.handleSearch} />
+          <SearchBar searching={this.state.searching} handleSearch={this.handleSearch} />
         </SearchBarStyle>
         <PostList>
           {this.state.searching

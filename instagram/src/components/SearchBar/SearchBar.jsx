@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import magnifyingGlass from '../../img/search.svg';
 
  const SearchBarContent = styled.div`
     display: flex;
@@ -39,7 +39,7 @@ import styled from 'styled-components';
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #f9f9f9 url(./img/search.svg) no-repeat scroll 1px 1px;
+    background: ${props => props.searching ? `#f9f9f9;` : `#f9f9f9 url(${magnifyingGlass}) no-repeat scroll 1px 1px;`}
     background-size: 8%;
     background-position: 50px 4px;
     text-align: center;
@@ -69,7 +69,7 @@ const SearchBar = (props) => {
                 <InstagramLogo alt="instagram logo" src={require('../../img/instagram.jpg')}/>
             </SearchBarLeft>
             <div>
-                <SearchBarField type='text' placeholder="Search" onChange={props.handleSearch}/>
+                <SearchBarField type='text' placeholder="Search" searching={props.searching} onChange={props.handleSearch}/>
             </div>
             <SearchBarRight>
                 <Icon alt="external" src={require('../../img/corner-pointy.png')}/>
