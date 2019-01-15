@@ -9,6 +9,8 @@ class App extends Component {
     super();
     this.state = {
       posts : [],
+      filtered_posts: [],
+      searching : false,
     }
   }
   componentDidMount() {
@@ -41,14 +43,34 @@ class App extends Component {
     this.setState({posts : object});
   }
 
+  handleSearch = (event) => {
+    console.log(event.target.value);
+    let string = event.target.value;
+    let obj = this.state;
+    if (string.length > 0) {
+      const searched_array = obj.posts.filter( item => { return (item.username.toUpperCase().indexOf(string.toUpperCase()) > -1)});
+      obj.filtered_posts = searched_array;
+      obj.searching = true;
+      this.setState(obj)
+    }
+    else if (string.length === 0) {
+      obj.filtered_posts = [];
+      obj.searching = false;
+      this.setState(obj)
+    }
+  }
+
   render() {
     return (
       <div className="App">
         <div className="search-bar">
-          <SearchBar/>
+          <SearchBar handleSearch={this.handleSearch}/>
         </div>
         <div className="post-list">
-              {this.state.posts.map((obj) =>
+          { this.state.searching ? this.state.filtered_posts.map((obj) =>
+              <PostContainer handleLikes={this.handleLikes} handleAddComment={this.handleAddComment} post={obj} index={this.state.posts.indexOf(obj)} key={this.state.posts.indexOf(obj)}/>)
+               :
+                this.state.posts.map((obj) =>
               <PostContainer handleLikes={this.handleLikes} handleAddComment={this.handleAddComment} post={obj} index={this.state.posts.indexOf(obj)} key={this.state.posts.indexOf(obj)}/>
               )}
         </div>

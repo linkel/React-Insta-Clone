@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SearchBar = () => {
+const SearchBar = (props) => {
     return (
         <div className='search-bar-content'>
             <div className='search-bar-left'>
@@ -8,7 +8,7 @@ const SearchBar = () => {
                 <img className="instagram-logo" alt="instagram logo" src={require('../../img/instagram.jpg')}/>
             </div>
             <div>
-                <input className='search-bar-field' type='text' placeholder="Search"></input>
+                <input className='search-bar-field' type='text' placeholder="Search" onChange={props.handleSearch}></input>
             </div>
             <div className="search-bar-right">
                 <img className="icon" alt="external" src={require('../../img/corner-pointy.png')}/>
