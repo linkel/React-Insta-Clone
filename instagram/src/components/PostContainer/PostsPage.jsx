@@ -14,7 +14,7 @@ class PostsPage extends React.Component {
   }
 
   componentDidMount() {
-    if (JSON.parse(localStorage.getItem("posts")).length === 0) {
+    if (!localStorage.getItem("posts")) {
       this.setState({ posts: dummyData });
     } else {
       this.setState({ posts: JSON.parse(localStorage.getItem("posts")) });

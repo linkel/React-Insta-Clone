@@ -7,17 +7,25 @@ const Authenticate = App => {
             super();
             this.state = {
                 loggedIn : false,
+                username : null,
+            }
+        }
+        componentDidMount() {
+            if (localStorage.getItem("username")) {
+                this.setState({loggedIn: true});
+                this.setState({username:localStorage.getItem("username")});
             }
         }
         handleLogin = (event) => {
             event.preventDefault();
             localStorage.setItem("username",event.target[0].value);
             this.setState({loggedIn: true});
+            this.setState({username:event.target[0].value});
           }
         render() {
             if (this.state.loggedIn) {
             return (
-                <App />
+                <App username={this.state.username} />
             )
             } else {
                 return (<Login handleLogin={this.handleLogin} />)
