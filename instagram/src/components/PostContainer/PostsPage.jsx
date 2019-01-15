@@ -23,7 +23,7 @@ class PostsPage extends React.Component {
 
   handleAddComment = (event, index) => {
     //event.preventDefault(); // Removing this takes advantage of the default refreshing and entry clearing
-    let username = "temporary";
+    let username = this.props.username;
     let comment = event.target[0].value;
     let object = this.state.posts;
     for (let i in object) {
