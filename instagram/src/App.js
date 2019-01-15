@@ -14,7 +14,11 @@ class App extends Component {
     }
   }
   componentDidMount() {
-    this.setState({posts: dummyData})
+    if (JSON.parse(localStorage.getItem("posts")).length === 0) {
+      this.setState({posts: dummyData})
+    } else {
+      this.setState({posts: JSON.parse(localStorage.getItem("posts"))})
+    }
   }
 
   handleAddComment = (event, index) => {
@@ -29,11 +33,11 @@ class App extends Component {
       }
     }
     this.setState({posts : object});
+    localStorage.setItem("posts", JSON.stringify(this.state.posts));
   }
 
   handleLikes = (event, index) => {
     let object = this.state.posts;
-    console.log(event);
     for (let i in object) {
       if (parseInt(i) === parseInt(index)) {
          object[i].likes += 1;
@@ -44,7 +48,6 @@ class App extends Component {
   }
 
   handleSearch = (event) => {
-    console.log(event.target.value);
     let string = event.target.value;
     let obj = this.state;
     if (string.length > 0) {
