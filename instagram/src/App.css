@@ -6,14 +6,15 @@ img {
   width: 100%;
   height: auto;
 }
-
+/*
 .post-list {
   width: 100%;
   max-width: 1000px;
-  margin: 136px auto 0 auto;   /* 76px is height of searchbar */
+  margin: 136px auto 0 auto;   /* 76px is height of searchbar *//*
   display: flex;
   flex-direction: column;
 }
+*/
 
 .post-container {
   border: 1px solid rgb(219, 219, 219);
@@ -21,7 +22,7 @@ img {
   width: 100%;
   margin: 0 0 50px 3.2%;
 }
-
+/*
 .search-bar {
   position: fixed;
   top: 0;
@@ -30,7 +31,7 @@ img {
   border-bottom: 2px solid #e2e2e2;
   z-index: 10;
   background: #fff;
-}
+}*/
 
 .search-bar-content {
   display: flex;

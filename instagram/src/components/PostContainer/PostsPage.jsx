@@ -2,6 +2,25 @@ import React from "react";
 import PostContainer from "../PostContainer/PostContainer";
 import SearchBar from "../SearchBar/SearchBar";
 import dummyData from "../../dummy-data";
+import styled from 'styled-components';
+
+const PostList = styled.div`
+  width: 100%;
+  max-width: 1000px;
+  margin: 136px auto 0 auto;   /* 76px is height of searchbar */
+  display: flex;
+  flex-direction: column;
+`;
+
+const SearchBarStyle = styled.div`
+  position: fixed;
+  top: 0;
+  height: 76px;
+  width: 100%;
+  border-bottom: 2px solid #e2e2e2;
+  z-index: 10;
+  background: #fff;
+`;
 
 class PostsPage extends React.Component {
   constructor(props) {
@@ -67,10 +86,10 @@ class PostsPage extends React.Component {
   render() {
     return (
       <>
-        <div className="search-bar">
+        <SearchBarStyle>
           <SearchBar handleSearch={this.handleSearch} />
-        </div>
-        <div className="post-list">
+        </SearchBarStyle>
+        <PostList>
           {this.state.searching
             ? this.state.filtered_posts.map(obj => (
                 <PostContainer
@@ -90,7 +109,7 @@ class PostsPage extends React.Component {
                   key={this.state.posts.indexOf(obj)}
                 />
               ))}
-        </div>
+        </PostList>
       </>
     );
   }

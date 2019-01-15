@@ -1,21 +1,82 @@
 import React from 'react';
+import styled from 'styled-components';
+
+
+ const SearchBarContent = styled.div`
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    height: 61px;
+    width: 100%;
+    max-width: 1000px;
+    padding-top: 15px;
+    position: relative;
+    align-items: center;
+  `;
+  
+  const SearchBarLeft = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  `;
+  
+  const Camera = styled.img`
+    border-right: 1px solid gray;
+    margin: 0 10px 0 0;
+    padding: 0 10px;
+    height: 27px;
+    width: 50px;
+    cursor: pointer;
+  `;
+  
+  const InstagramLogo = styled.img`
+    margin: 7px 0 0 2%;
+    width: 100px;
+    cursor: pointer;
+  `;
+  
+  const SearchBarField = styled.input`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f9f9f9 url(./img/search.svg) no-repeat scroll 1px 1px;
+    background-size: 8%;
+    background-position: 50px 4px;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid rgb(216, 216, 216);
+  `;
+  
+  const SearchBarRight = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 150px;
+    justify-content: space-between;
+  `;
+  
+  const Icon = styled.img`
+    width: 28px;
+    height: 30px;
+    cursor: pointer;
+  `;
 
 const SearchBar = (props) => {
     return (
-        <div className='search-bar-content'>
-            <div className='search-bar-left'>
-                <img className="camera" alt="camera" src={require('../../img/camera.svg')}/>
-                <img className="instagram-logo" alt="instagram logo" src={require('../../img/instagram.jpg')}/>
-            </div>
+        <SearchBarContent>
+            <SearchBarLeft>
+                <Camera alt="camera" src={require('../../img/camera.svg')}/>
+                <InstagramLogo alt="instagram logo" src={require('../../img/instagram.jpg')}/>
+            </SearchBarLeft>
             <div>
-                <input className='search-bar-field' type='text' placeholder="Search" onChange={props.handleSearch}></input>
+                <SearchBarField type='text' placeholder="Search" onChange={props.handleSearch}/>
             </div>
-            <div className="search-bar-right">
-                <img className="icon" alt="external" src={require('../../img/corner-pointy.png')}/>
-                <img className="icon" alt="heart" src={require('../../img/corner-heart.png')}/>
-                <img className="icon" alt="profile" src={require('../../img/corner-dude.png')}/>
-            </div>
-        </div>
+            <SearchBarRight>
+                <Icon alt="external" src={require('../../img/corner-pointy.png')}/>
+                <Icon alt="heart" src={require('../../img/corner-heart.png')}/>
+                <Icon alt="profile" src={require('../../img/corner-dude.png')}/>
+            </SearchBarRight>
+        </SearchBarContent>
     )
 }
 
