@@ -1,7 +1,6 @@
 import React from "react";
-import Login from "../Login/Login";
 
-const Authenticate = App => {
+const Authenticate = App => LoginPage => {
     return class extends React.Component {
         constructor() {
             super();
@@ -28,7 +27,7 @@ const Authenticate = App => {
                 <App username={this.state.username} />
             )
             } else {
-                return (<Login handleLogin={this.handleLogin} />)
+                return (<LoginPage handleLogin={this.handleLogin} />)
             }
         }
     }
