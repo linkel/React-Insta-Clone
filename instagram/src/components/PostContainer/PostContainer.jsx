@@ -9,6 +9,9 @@ const PostContainerStyles = styled.div`
     max-width: 615px;
     width: 100%;
     margin: 0 0 50px 3.2%;
+    @media (max-width: 1000px) {
+        max-width: 90%;
+    }
 `;
 
 const PostContainer = (props) => {

@@ -29,11 +29,15 @@ const Thumbnail = styled.img`
     border-radius: 100px;
     height: 30px;
     width: 30px;
-    z-index: 10;
+    z-index: 1;
 `;
   
 const PostHeader = styled.div`
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding: 18px 3% 18px 3%;
+    background: #fff;
 `;
   
 const PostFooterTop = styled.div`
@@ -47,14 +51,20 @@ const PostFooterBottom = styled.div`
     text-align: left;
     padding: 0 10px 10px 14px;
 `;
-  
+
+const UsernameHolder = styled.p`
+    font-weight: bold;
+    font-size: 14px;
+    padding: 0;
+    margin: 0 0 0 10px;
+`;
 
 const Post = (props) => {
     return (
         <div className="post">
             <PostHeader>
                 <Thumbnail alt="thumbnail" src={props.thumbnail}/>
-                {props.username}
+                <UsernameHolder>{props.username}</UsernameHolder>
             </PostHeader>
             <Image alt="big" src={props.image}/>
             <div className="post-footer">
@@ -66,7 +76,7 @@ const Post = (props) => {
                     <IconBookmark alt="bookmark" src={require('../../img/bookmark.svg')}/>
                 </PostFooterTop>
                 <PostFooterBottom>
-                    {props.likes} likes
+                    <b>{props.likes} likes</b>
                 </PostFooterBottom>
             </div>
         </div>

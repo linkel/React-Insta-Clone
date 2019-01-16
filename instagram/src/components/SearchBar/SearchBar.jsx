@@ -12,6 +12,9 @@ import magnifyingGlass from '../../img/search.svg';
     padding-top: 15px;
     position: relative;
     align-items: center;
+    @media (max-width: 550px) {
+        
+    }
   `;
   
   const SearchBarLeft = styled.div`
@@ -40,11 +43,15 @@ import magnifyingGlass from '../../img/search.svg';
     align-items: center;
     justify-content: center;
     background: ${props => props.searching ? `#f9f9f9;` : `#f9f9f9 url(${magnifyingGlass}) no-repeat scroll 1px 1px;`}
-    background-size: 8%;
-    background-position: 50px 4px;
+    background-size: 7%;
+    background-position: 64px 4px;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 3px;
     border: 2px solid rgb(216, 216, 216);
+    width: 220px;
+    @media (max-width:550px) {
+        display: none;
+    }
   `;
   
   const SearchBarRight = styled.div`

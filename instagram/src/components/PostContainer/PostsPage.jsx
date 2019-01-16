@@ -10,6 +10,10 @@ const PostList = styled.div`
   margin: 136px auto 0 auto;   /* 76px is height of searchbar */
   display: flex;
   flex-direction: column;
+  @media (max-width:550px) {
+    margin: 136px 10px 0 10px;
+    max-width: 550px;
+  }
 `;
 
 const SearchBarStyle = styled.div`
