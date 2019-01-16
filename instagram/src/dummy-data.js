@@ -1,5 +1,80 @@
 const dummyData = [
   {
+    username: "thesearchforbirds",
+    thumbnailUrl:
+      "https://i.imgur.com/eaQt6x2.jpg",
+
+    imageUrl:
+      "https://i.imgur.com/eaQt6x2.jpg",
+    likes: 345,
+    timestamp: "August 14th 2018, 11:42:40 pm",
+    comments: [
+      {
+        username: "thesearchforbirds",
+        text:
+          "Absolutely thrilling and beautiful."
+      },
+      {
+        username: "judynick",
+        text: "The colors are fascinating."
+      },
+      {
+        username: "furbaby",
+        text: "Wish I could fly."
+      }
+    ]
+  },
+  {
+    username: "spyderholes",
+    thumbnailUrl:
+      "https://i.imgur.com/tqzOuV1.jpg",
+
+    imageUrl:
+      "https://i.imgur.com/tqzOuV1.jpg",
+    likes: 95,
+    timestamp: "June 12th 2018, 11:52:40 pm",
+    comments: [
+      {
+        username: "spyderholes",
+        text:
+          "What do you all think?"
+      },
+      {
+        username: "tempter",
+        text: "Stop ruining the tips."
+      },
+      {
+        username: "daretolive",
+        text: "I might grab that good stuff."
+      }
+    ]
+  },
+  {
+    username: "finders",
+    thumbnailUrl:
+      "https://i.imgur.com/Eb4VXzc.jpg",
+
+    imageUrl:
+      "https://i.imgur.com/Eb4VXzc.jpg",
+    likes: 45,
+    timestamp: "July 14th 2018, 12:42:40 pm",
+    comments: [
+      {
+        username: "finders",
+        text:
+          "A quiet exploration adventure."
+      },
+      {
+        username: "whattheheck",
+        text: "I like it!"
+      },
+      {
+        username: "jaredmonster",
+        text: "Feels kind of creepy."
+      }
+    ]
+  },
+  {
     username: "philzcoffee",
     thumbnailUrl:
       "https://tk-assets.lambdaschool.com/ecd33d34-c124-4b75-92d2-e5c52c171ed8_11201517_887808411287357_1307163552_a.jpg",
