@@ -1,0 +1,131 @@
+/*
+img {
+  width: 100%;
+  height: auto;
+}*/
+/*
+.post-list {
+  width: 100%;
+  max-width: 1000px;
+  margin: 136px auto 0 auto;   /* 76px is height of searchbar *//*
+  display: flex;
+  flex-direction: column;
+}
+
+.post-container {
+  border: 1px solid rgb(219, 219, 219);
+  max-width: 615px;
+  width: 100%;
+  margin: 0 0 50px 3.2%;
+}
+.search-bar {
+  position: fixed;
+  top: 0;
+  height: 76px;
+  width: 100%;
+  border-bottom: 2px solid #e2e2e2;
+  z-index: 10;
+  background: #fff;
+}
+.search-bar-content {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  height: 61px;
+  width: 100%;
+  max-width: 1000px;
+  padding-top: 15px;
+  position: relative;
+  align-items: center;
+}
+
+.search-bar-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.camera {
+  border-right: 1px solid gray;
+  margin: 0 10px 0 0;
+  padding: 0 10px;
+  height: 27px;
+  width: 50px;
+  cursor: pointer;
+}
+.instagram-logo {
+  margin: 7px 0 0 2%;
+  width: 100px;
+  cursor: pointer;
+}
+
+.search-bar-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9 url(./img/search.svg) no-repeat scroll 1px 1px;
+  background-size: 8%;
+  background-position: 50px 4px;
+  text-align: center;
+  border-radius: 5px;
+  border: 2px solid rgb(216, 216, 216);
+}
+
+.search-bar-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 150px;
+  justify-content: space-between;
+}
+
+.icon {
+  width: 28px;
+  height: 30px;
+  cursor: pointer;
+}*/
+
+/*
+.icon-heart {
+  width: 31px;
+  height: 30px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.icon-speech {
+  width: 34px;
+  height: 28px;
+  cursor: pointer;
+}
+
+.icon-bookmark {
+  width: 28px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.thumbnail {
+  width: 100%;
+  height: auto;
+  border-radius: 100px;
+  height: 30px;
+  width: 30px;
+}
+
+.post-header {
+  font-weight: bold;
+}
+
+.post-footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.post-footer-bottom{
+  text-align: left;
+  padding: 0 10px 10px 14px;
+}
+*/
