@@ -11,7 +11,7 @@ const CommentForm = styled.form`
 const CommentInput = styled.input`
     width: 100%;
     border: 0;
-    border-top: 1px solid rgb(219, 219, 219)
+    border-top: 1px solid rgb(219, 219, 219);
 `;
 
 const CommentSection = (props) => {

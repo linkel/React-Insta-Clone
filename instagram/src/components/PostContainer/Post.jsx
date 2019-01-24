@@ -13,11 +13,10 @@ const IconHeart = styled.img`
     cursor: pointer;
   `
 const IconSpeech = styled.img`
-  .icon-speech {
     width: 34px;
     height: 28px;
     cursor: pointer;
-  `;
+  `
   
 const IconBookmark = styled.img`
     width: 28px;
@@ -59,28 +58,51 @@ const UsernameHolder = styled.p`
     margin: 0 0 0 10px;
 `;
 
-const Post = (props) => {
-    return (
-        <div className="post">
-            <PostHeader>
-                <Thumbnail alt="thumbnail" src={props.thumbnail}/>
-                <UsernameHolder>{props.username}</UsernameHolder>
-            </PostHeader>
-            <Image alt="big" src={props.image}/>
-            <div className="post-footer">
-                <PostFooterTop>
-                    <div>
-                        <IconHeart onClick={(e) => props.handleLikes(e, props.index)} alt="heart" src={require('../../img/heart.svg')}/>
-                        <IconSpeech alt="speech" src={require('../../img/speech.png')}/>
-                    </div>
-                    <IconBookmark alt="bookmark" src={require('../../img/bookmark.svg')}/>
-                </PostFooterTop>
-                <PostFooterBottom>
-                    <b>{props.likes} likes</b>
-                </PostFooterBottom>
+class Post extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            liked: false
+        }
+    }
+    handleLikes = (e) => {
+        this.setState({liked: !this.state.liked})
+    }
+    render() {
+        return (
+            <div className="post">
+                <PostHeader>
+                    <Thumbnail alt="thumbnail" src={this.props.thumbnail}/>
+                    <UsernameHolder>{this.props.username}</UsernameHolder>
+                </PostHeader>
+                <Image alt="big" src={this.props.image}/>
+                <div className="post-footer">
+                    <PostFooterTop>
+                        <div>
+                            {this.state.liked ? <IconHeart onClick={
+                                (e) => {
+                                    this.props.handleLikes(e, this.props.index, this.state.liked); 
+                                    this.handleLikes(e);
+                                }}
+                                
+                                alt="heart" src={require('../../img/liked_heart.png')}/>
+                                : <IconHeart onClick={
+                                    (e) => {
+                                        this.props.handleLikes(e, this.props.index, this.state.liked);
+                                        this.handleLikes(e);
+                                }}
+                                alt="heart" src={require('../../img/heart.svg')}/>}
+                            <IconSpeech alt="speech" src={require('../../img/speech.png')}/>
+                        </div>
+                        <IconBookmark alt="bookmark" src={require('../../img/bookmark.svg')}/>
+                    </PostFooterTop>
+                    <PostFooterBottom>
+                        <b>{this.props.likes} likes</b>
+                    </PostFooterBottom>
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
 
 export default Post

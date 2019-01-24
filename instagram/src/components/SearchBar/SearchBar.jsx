@@ -42,7 +42,7 @@ import magnifyingGlass from '../../img/search.svg';
     display: flex;
     align-items: center;
     justify-content: center;
-    background: ${props => props.searching ? `#f9f9f9;` : `#f9f9f9 url(${magnifyingGlass}) no-repeat scroll 1px 1px;`}
+    background: ${props => props.searching ? `#f9f9f9;` : `#f9f9f9 url(${magnifyingGlass}) no-repeat scroll 1px 1px;`};
     background-size: 7%;
     background-position: 64px 4px;
     text-align: center;

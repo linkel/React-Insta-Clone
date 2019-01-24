@@ -70,7 +70,7 @@ const Login = (props) => {
                 <LoginForm onSubmit={props.handleLogin} >
                     <InputText type="text" placeholder="Username"/>
                     <InputText type="text" placeholder="Full Name"/>
-                    <InputText type="text" placeholder="Password"/>
+                    <InputText type="password" placeholder="Password"/>
                     <LoginButton type="submit" value="Log In"></LoginButton>
                 </LoginForm>
             </LoginContainer>

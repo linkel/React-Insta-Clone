@@ -59,12 +59,17 @@ class PostsPage extends React.Component {
     localStorage.setItem("posts", JSON.stringify(this.state.posts));
   };
 
-  handleLikes = (event, index) => {
+  handleLikes = (event, index, liked) => {
     let object = this.state.posts;
     for (let i in object) {
       if (parseInt(i) === parseInt(index)) {
-        object[i].likes += 1;
-        break;
+        if (liked === true) {
+          object[i].likes -= 1;
+          break;
+        } else {
+          object[i].likes += 1;
+          break;
+        }
       }
     }
     this.setState({ posts: object });
